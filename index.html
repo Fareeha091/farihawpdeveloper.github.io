@@ -258,6 +258,79 @@
             z-index: 3;
         }
 
+        /* Features Section */
+        .features {
+            background-color: #1a1a1a;
+            padding: 100px 0;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .features-subtitle {
+            color: #ff6b6b;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .features-title {
+            font-size: 48px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: #2a2a2a;
+            padding: 40px 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 107, 107, 0.1);
+            border-color: #ff6b6b;
+        }
+
+        .feature-icon {
+            color: #ff6b6b;
+            font-size: 40px;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .feature-description {
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-container {
@@ -288,6 +361,15 @@
 
             .demos-label {
                 display: none;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .features-title {
+                font-size: 36px;
             }
         }
 
@@ -372,6 +454,54 @@ I’m a skilled Web Developer & Designer with 2 years of experience creating cus
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <div class="features-header">
+                <p class="features-subtitle">FEATURES</p>
+                <h2 class="features-title">What I Do</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bars feature-icon"></i>
+                    <h3 class="feature-title">Business Strategy</h3>
+                    <p class="feature-description">I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-book feature-icon"></i>
+                    <h3 class="feature-title">App Development</h3>
+                    <p class="feature-description">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-tv feature-icon"></i>
+                    <h3 class="feature-title">App Development</h3>
+                    <p class="feature-description">I throw myself down among the tall grass by the stream as I lie close to the earth.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-comments feature-icon"></i>
+                    <h3 class="feature-title">Mobile App</h3>
+                    <p class="feature-description">There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-wifi feature-icon"></i>
+                    <h3 class="feature-title">CEO Marketing</h3>
+                    <p class="feature-description">always free from repetition, injected humour, or non-characteristic words etc.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-star feature-icon"></i>
+                    <h3 class="feature-title">Personal Portfolio April</h3>
+                    <p class="feature-description">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence.</p>
                 </div>
             </div>
         </div>
