@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nodulo - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Fariha Batool | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -14,1297 +14,383 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1A1A1A;
-            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
+        /* Header Styles */
+        .header {
+            background-color: #1a1a1a;
+            padding: 20px 0;
             position: fixed;
             top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(26, 26, 26, 0.95);
-            backdrop-filter: blur(10px);
+            width: 100%;
             z-index: 1000;
-            padding: 20px 0;
+            border-bottom: 1px solid #333;
         }
 
-        nav {
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 20px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+            object-fit: cover;
+        }
+
+        .logo-text {
             font-size: 24px;
             font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 2px;
         }
 
-        .logo-icon {
-            width: 30px;
-            height: 30px;
-            background: #AFFF00;
-            border-radius: 50%;
+        .nav-menu {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1A1A1A;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
             list-style: none;
+            gap: 30px;
+            align-items: center;
         }
 
-        .nav-links a {
-            color: #FFFFFF;
+        .nav-menu li a {
+            color: #ffffff;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: #AFFF00;
+        .nav-menu li a:hover {
+            color: #ff6b6b;
         }
 
-        .cta-button {
-            background: #AFFF00;
-            color: #1A1A1A;
-            border: none;
-            border-radius: 50px;
-            padding: 12px 20px;
+        .buy-now-btn {
+            background-color: #ff6b6b;
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
             font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
         }
 
-        .cta-button:hover {
-            transform: scale(1.05);
+        .buy-now-btn:hover {
+            background-color: #ff5252;
+            transform: translateY(-2px);
         }
 
         /* Hero Section */
         .hero {
+            background-color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
             padding: 120px 0 80px;
+            position: relative;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 80px;
             align-items: center;
+            padding: 0 20px;
         }
 
-        .hero-content h3 {
-            color: #CCCCCC;
-            font-size: 18px;
-            font-weight: 400;
-            margin-bottom: 10px;
+        .hero-content {
+            z-index: 2;
         }
 
-        .hero-content h1 {
+        .welcome-text {
+            color: #888;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
             font-size: 48px;
             font-weight: 800;
-            margin-bottom: 10px;
             line-height: 1.2;
-        }
-
-        .hero-content .highlight {
-            color: #AFFF00;
-        }
-
-        .hero-content p {
-            color: #CCCCCC;
-            font-size: 16px;
             margin-bottom: 30px;
-            line-height: 1.6;
         }
 
-        .hero-buttons {
+        .hero-name {
+            color: #ff6b6b;
+            display: inline;
+            text-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+        }
+
+        .hero-description {
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .social-section {
+            margin-bottom: 40px;
+        }
+
+        .section-label {
+            color: #888;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .social-links {
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
-        .btn-primary {
-            background: #AFFF00;
-            color: #1A1A1A;
-            border: none;
-            padding: 15px 30px;
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background-color: #ff6b6b;
+            border-color: #ff6b6b;
+            transform: translateY(-3px);
+        }
+
+        .skills-section {
+            margin-bottom: 40px;
+        }
+
+        .skill-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .skill-link {
+            width: 50px;
+            height: 50px;
             border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: #FFFFFF;
-            border: 2px solid #AFFF00;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-secondary:hover {
-            background: #AFFF00;
-            color: #1A1A1A;
+        .skill-link:hover {
+            background-color: #ff6b6b;
+            border-color: #ff6b6b;
+            transform: translateY(-3px);
         }
 
         .hero-image {
             position: relative;
-            text-align: center;
+            z-index: 1;
         }
 
-        .profile-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #AFFF00;
+        .hero-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .stats-cards {
+        .demos-label {
             position: absolute;
             right: -50px;
             top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .stat-card {
-            background: #2C2C2C;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            min-width: 200px;
-        }
-
-        .stat-number {
-            font-size: 24px;
-            font-weight: 700;
-            color: #AFFF00;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: #CCCCCC;
-            margin-top: 5px;
-        }
-
-        /* Section Styles */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .section-title .highlight {
-            color: #AFFF00;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #CCCCCC;
-            font-size: 18px;
-            margin-bottom: 60px;
-        }
-
-        /* Professional Solutions Section */
-        .solutions {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .solutions-content h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .solutions-content .highlight {
-            color: #AFFF00;
-        }
-
-        .solutions-content p {
-            color: #CCCCCC;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .services-list {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .services-list li {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-            color: #FFFFFF;
-        }
-
-        .check-icon {
-            color: #AFFF00;
-            font-size: 18px;
-        }
-
-        .solutions-image {
-            text-align: center;
-        }
-
-        .solutions-image img {
-            width: 300px;
-            height: 300px;
-            border-radius: 12px;
-            object-fit: cover;
-        }
-
-        /* Experience Section */
-        .experience {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .experience-icon {
-            width: 80px;
-            height: 80px;
-            background: #AFFF00;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: #1A1A1A;
-            margin-bottom: 30px;
-        }
-
-        .experience-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .experience-card {
-            background: #2C2C2C;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 4px solid #AFFF00;
-        }
-
-        .experience-period {
-            color: #AFFF00;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .experience-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .experience-company {
-            color: #CCCCCC;
-            font-size: 14px;
-        }
-
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .service-card {
-            background: #2C2C2C;
-            padding: 40px 30px;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-number {
-            font-size: 48px;
-            font-weight: 700;
-            color: #AFFF00;
-            margin-bottom: 20px;
-        }
-
-        .service-title {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .service-description {
-            color: #CCCCCC;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .service-check {
-            color: #AFFF00;
-            font-size: 24px;
-        }
-
-        /* Skills Section */
-        .skills {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .skill-card {
-            background: #2C2C2C;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-logo {
-            width: 40px;
-            height: 40px;
-            background: #AFFF00;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 15px;
-            font-weight: bold;
-            color: #1A1A1A;
-        }
-
-        .skill-percentage {
-            font-size: 24px;
-            font-weight: 700;
-            color: #AFFF00;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .project-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: center;
-            background: #2C2C2C;
-            border-radius: 12px;
-            padding: 30px;
-        }
-
-        .project-card:nth-child(even) {
-            direction: rtl;
-        }
-
-        .project-card:nth-child(even) > * {
-            direction: ltr;
-        }
-
-        .project-image {
-            width: 100%;
-            height: 200px;
-            background: #1A1A1A;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #AFFF00;
-            font-size: 48px;
-        }
-
-        .project-content h3 {
-            color: #AFFF00;
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .project-content p {
-            color: #CCCCCC;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .project-button {
-            background: transparent;
-            color: #FFFFFF;
-            border: 2px solid #AFFF00;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .project-button:hover {
-            background: #AFFF00;
-            color: #1A1A1A;
-        }
-
-        .view-all-projects {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .testimonial-card {
-            background: #2C2C2C;
-            padding: 25px;
-            border-radius: 12px;
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: #AFFF00;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1A1A1A;
-            font-weight: bold;
-        }
-
-        .testimonial-info h4 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .testimonial-info p {
-            color: #CCCCCC;
-            font-size: 14px;
-        }
-
-        .testimonial-rating {
-            color: #AFFF00;
-            margin-bottom: 10px;
-        }
-
-        .testimonial-quote {
-            color: #CCCCCC;
-            font-style: italic;
-            line-height: 1.6;
-        }
-
-        /* Pricing Section */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .pricing-card {
-            background: #2C2C2C;
-            padding: 40px 30px;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .pricing-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .pricing-price {
-            font-size: 36px;
-            font-weight: 700;
-            color: #AFFF00;
-            margin-bottom: 20px;
-        }
-
-        .pricing-description {
-            color: #CCCCCC;
-            margin-bottom: 30px;
-        }
-
-        .pricing-features {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .pricing-features li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            color: #FFFFFF;
-        }
-
-        .pricing-button {
-            background: #AFFF00;
-            color: #1A1A1A;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: transform 0.3s;
-        }
-
-        .pricing-button:hover {
-            transform: scale(1.05);
-        }
-
-        /* Contact Section */
-        .contact {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .contact-form {
-            background: #2C2C2C;
-            padding: 40px;
-            border-radius: 12px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            background: #1A1A1A;
-            border: 1px solid #444;
-            border-radius: 8px;
-            color: #FFFFFF;
-            font-size: 16px;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #AFFF00;
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .contact-button {
-            background: #AFFF00;
-            color: #1A1A1A;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: transform 0.3s;
-        }
-
-        .contact-button:hover {
-            transform: scale(1.05);
-        }
-
-        /* Blog Section */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .blog-card {
-            background: #2C2C2C;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-image {
-            width: 100%;
-            height: 200px;
-            background: #1A1A1A;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #AFFF00;
-            font-size: 48px;
-        }
-
-        .blog-content {
-            padding: 25px;
-        }
-
-        .blog-category {
-            color: #AFFF00;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .blog-date {
-            color: #CCCCCC;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .blog-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .blog-link {
-            color: #AFFF00;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Client Logos */
-        .client-logos {
-            text-align: center;
-            margin: 80px 0;
-        }
-
-        .client-logos h3 {
-            color: #CCCCCC;
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-
-        .logos-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 30px;
-        }
-
-        .logo-item {
-            background: #2C2C2C;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            color: #CCCCCC;
-            font-weight: 600;
-        }
-
-        /* Footer */
-        footer {
-            background: #2C2C2C;
-            padding: 60px 0 20px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .footer-logo-icon {
-            width: 30px;
-            height: 30px;
-            background: #AFFF00;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1A1A1A;
-            font-weight: bold;
-        }
-
-        .footer-description {
-            color: #CCCCCC;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .footer-contact {
-            color: #CCCCCC;
-            margin-bottom: 10px;
-        }
-
-        .footer-button {
-            background: #AFFF00;
-            color: #1A1A1A;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .footer-section h4 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #CCCCCC;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #AFFF00;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            background: #1A1A1A;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .social-icon:hover {
-            background: #AFFF00;
-            color: #1A1A1A;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #444;
-            padding-top: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #CCCCCC;
-        }
-
-        .footer-bottom-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .footer-bottom-links a {
-            color: #CCCCCC;
-            text-decoration: none;
+            transform: translateY(-50%) rotate(-90deg);
+            color: #888;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 3;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .nav-container {
+                flex-direction: column;
+                gap: 20px;
             }
 
-            .hero {
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .hero-container {
                 grid-template-columns: 1fr;
+                gap: 40px;
                 text-align: center;
             }
 
-            .hero-buttons {
-                justify-content: center;
+            .hero-title {
+                font-size: 36px;
             }
 
-            .stats-cards {
-                position: static;
-                transform: none;
-                flex-direction: row;
-                justify-content: center;
-                margin-top: 30px;
+            .demos-label {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 28px;
             }
 
-            .solutions,
-            .experience,
-            .skills,
-            .testimonials,
-            .contact {
-                grid-template-columns: 1fr;
+            .nav-menu {
+                gap: 15px;
             }
 
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-card {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .logos-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 20px;
+            .nav-menu li a {
+                font-size: 12px;
             }
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <nav class="container">
+    <header class="header">
+        <div class="nav-container">
             <div class="logo">
-                <div class="logo-icon">*</div>
-                <span>Nodulo</span>
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Profile" class="logo-img">
+                <span class="logo-text">INBIO</span>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="cta-button">
-                <i class="fas fa-comment"></i>
-            </button>
-        </nav>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#features">FEATURES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#resume">RESUME</a></li>
+                    <li><a href="#clients">CLIENTS</a></li>
+                    <li><a href="#pricing">PRICING</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#" class="buy-now-btn">BUY NOW</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
+    <section class="hero" id="home">
+        <div class="hero-container">
             <div class="hero-content">
-                <h3>Hello, I'm</h3>
-                <h1>Roy C. Jones</h1>
-                <h2 class="highlight">web designer</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary">Hire Me</button>
-                    <button class="btn-secondary">Download CV</button>
+                <p class="welcome-text">WELCOME TO MY WORLD</p>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="hero-name">Fariha Batool</span> a Developer.
+                </h1>
+                <p class="hero-description">
+                    I use animation as a third dimension by which to simplify experiences and building thro each and every interaction. I'm not adding motion just to spruce things up, but doing it in ways that.
+                </p>
+                
+                <div class="social-section">
+                    <p class="section-label">FIND WITH ME</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="skills-section">
+                    <p class="section-label">BEST SKILL ON</p>
+                    <div class="skill-links">
+                        <a href="#" class="skill-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="skill-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="skill-link">
+                            <i class="fab fa-figma"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
+            
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Roy C. Jones" class="profile-image">
-                <div class="stats-cards">
-                    <div class="stat-card">
-                        <div class="stat-number">13+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">8K+</div>
-                        <div class="stat-label">Project Complete</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">98%</div>
-                        <div class="stat-label">Client Satisfied</div>
-                    </div>
-                </div>
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face" alt="Fariha Batool" class="hero-img">
+                <div class="demos-label">DEMOS</div>
             </div>
         </div>
     </section>
 
-    <!-- Professional Solutions Section -->
-    <section id="about" class="section solutions">
-        <div class="container">
-            <div class="solutions-content">
-                <h2><span class="highlight">Professional Problem Solutions</span> For Digital Products</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-                <ul class="services-list">
-                    <li><i class="fas fa-check check-icon"></i> UI/UX Design</li>
-                    <li><i class="fas fa-check check-icon"></i> Web Development</li>
-                    <li><i class="fas fa-check check-icon"></i> Mobile App Design</li>
-                    <li><i class="fas fa-check check-icon"></i> Product Design</li>
-                </ul>
-                <div class="hero-buttons">
-                    <button class="btn-primary">My Experience</button>
-                    <button class="btn-secondary">Contact Me</button>
-                </div>
-            </div>
-            <div class="solutions-image">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Professional">
-            </div>
-        </div>
-    </section>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-    <!-- Experience Section -->
-    <section class="section experience">
-        <div class="container">
-            <div>
-                <div class="experience-icon">*</div>
-                <h2><span class="highlight">Real Problem Solutions</span> Experience</h2>
-            </div>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="experience-period">2018 - 2020</div>
-                    <div class="experience-title">Senior UI/UX Designer</div>
-                    <div class="experience-company">Google Inc.</div>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-period">2020 - 2022</div>
-                    <div class="experience-title">Product Designer</div>
-                    <div class="experience-company">Microsoft</div>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-period">2022 - 2023</div>
-                    <div class="experience-title">Lead Designer</div>
-                    <div class="experience-company">Apple Inc.</div>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-period">2023 - Present</div>
-                    <div class="experience-title">Creative Director</div>
-                    <div class="experience-company">Freelance</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="service" class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="highlight">My Special Service</span> For your Business Development</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-number">01</div>
-                    <h3 class="service-title">UI/UX Design</h3>
-                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-                    <i class="fas fa-check service-check"></i>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">02</div>
-                    <h3 class="service-title">Web Development</h3>
-                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-                    <i class="fas fa-check service-check"></i>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">03</div>
-                    <h3 class="service-title">Mobile App Design</h3>
-                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-                    <i class="fas fa-check service-check"></i>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">04</div>
-                    <h3 class="service-title">Product Design</h3>
-                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-                    <i class="fas fa-check service-check"></i>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">05</div>
-                    <h3 class="service-title">Brand Identity</h3>
-                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-                    <i class="fas fa-check service-check"></i>
-                </div>
-                <div class="service-card">
-                    <div class="service-number">06</div>
-                    <h3 class="service-title">Digital Marketing</h3>
-                    <p class="service-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
-                    <i class="fas fa-check service-check"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section skills">
-        <div class="container">
-            <div>
-                <h2>Let's Explore <span class="highlight">Popular Skills & Experience</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button class="btn-primary" style="margin-top: 30px;">View All</button>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-logo">F</div>
-                    <div class="skill-percentage">80%</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">Fr</div>
-                    <div class="skill-percentage">75%</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">Ps</div>
-                    <div class="skill-percentage">90%</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">Wp</div>
-                    <div class="skill-percentage">85%</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">A</div>
-                    <div class="skill-percentage">70%</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">W</div>
-                    <div class="skill-percentage">65%</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">Py</div>
-                    <div class="skill-percentage">60%</div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-logo">R</div>
-                    <div class="skill-percentage">80%</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2 class="section-title">Explore My <span class="highlight">Popular Projects</span></h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Mobile Application Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class="project-button">View Project</button>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Website Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class="project-button">View Project</button>
-                    </div>
-                    <div class="project-image">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-id-card"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Business Card Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class="project-button">View Project</button>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>3D Graphics Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <button class="project-button">View Project</button>
-                    </div>
-                    <div class="project-image">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="view-all-projects">
-                <button class="btn-primary">View All Projects</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="section testimonials">
-        <div class="container">
-            <div>
-                <h2>I've 1253+ <span class="highlight">Clients Feedback</span></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div style="margin-top: 30px;">
-                    <button class="btn-secondary" style="margin-right: 10px;"><i class="fas fa-arrow-left"></i></button>
-                    <button class="btn-secondary"><i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">JS</div>
-                        <div class="testimonial-info">
-                            <h4>John Smith</h4>
-                            <p>CEO, TechCorp</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-quote">"Excellent work! The design exceeded our expectations and helped increase our conversion rate significantly."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">MJ</div>
-                        <div class="testimonial-info">
-                            <h4>Maria Johnson</h4>
-                            <p>Founder, StartupXYZ</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-quote">"Professional, creative, and delivered on time. Highly recommended for any design project."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title"><span class="highlight">Amazing Pricing</span> For your Projects</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Basic</h3>
-                    <div class="pricing-price">$19.95</div>
-                    <p class="pricing-description">Perfect for small projects and startups</p>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check check-icon"></i> UI/UX Design</li>
-                        <li><i class="fas fa-check check-icon"></i> Web Development</li>
-                        <li><i class="fas fa-check check-icon"></i> 1 Revision</li>
-                        <li><i class="fas fa-check check-icon"></i> 7 Days Delivery</li>
-                    </ul>
-                    <button class="pricing-button">Get Started</button>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Standard</h3>
-                    <div class="pricing-price">$49.95</div>
-                    <p class="pricing-description">Best for growing businesses</p>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check check-icon"></i> UI/UX Design</li>
-                        <li><i class="fas fa-check check-icon"></i> Web Development</li>
-                        <li><i class="fas fa-check check-icon"></i> Mobile App Design</li>
-                        <li><i class="fas fa-check check-icon"></i> 3 Revisions</li>
-                        <li><i class="fas fa-check check-icon"></i> 14 Days Delivery</li>
-                    </ul>
-                    <button class="pricing-button">Get Started</button>
-                </div>
-                <div class="pricing-card">
-                    <h3 class="pricing-title">Premium</h3>
-                    <div class="pricing-price">$99.95</div>
-                    <p class="pricing-description">Complete solution for enterprises</p>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check check-icon"></i> UI/UX Design</li>
-                        <li><i class="fas fa-check check-icon"></i> Web Development</li>
-                        <li><i class="fas fa-check check-icon"></i> Mobil
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = '#1a1a1a';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
